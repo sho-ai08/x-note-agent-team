@@ -1,322 +1,176 @@
-# AI Agent Organization Template
+# x-note Agent Team Template
 
-**ライセンス**: MIT
+**note×X（旧Twitter）の収益化を自動化する、Claude Code Agent Teamsテンプレート**
 
-「〜の組織を作って」と指示するだけで、AIエージェント組織が自動構築されるテンプレート
+Claude Code の Agent Teams 機能（Opus 4.6）に最適化された、10体のAIエージェントが連携して動作する組織テンプレートです。
 
 ---
 
-## 概要
+## 何ができるのか
 
-AI Agent Organization Templateは、**あなただけのAIエージェント組織**を構築するためのテンプレートです。
+- note記事の作成・レビュー・装飾を自動パイプライン処理
+- X投稿（宣伝・オリジナル・長文）を並列生成
+- KPI分析・PDCA・コンテンツ企画・競合調査を一括依頼
+- 副業収益化の戦略壁打ち・日次タスク提案
 
-「〇〇をする組織を作って」と指示するだけで、SOVEREIGNが組織の初期化を実行し、GENESISが必要なエージェントを自動作成します。
+---
 
-### 初期状態
+## エージェント一覧
 
-テンプレートにはコアエージェント5体のみが含まれます：
-
-| エージェント | コードネーム | 役割 |
-|------------|------------|------|
-| CEO | SOVEREIGN | 組織統括、組織初期化、タスクルーティング |
-| Director | BOSS | 実働部隊統括、タスク分解 |
-| Agent Designer | GENESIS | エージェント設計・作成 |
-| Prompt Engineer | ARCHITECT | プロンプト作成・改善 |
-| Agent Trainer | MENTOR | フィードバック解析・経験値付与 |
-
-**operations/** 配下は空で、ユーザーの依頼に応じて実働エージェントが動的に作成されます。
-
-### 特徴
-
-- **自動初期化**: 「〜の組織を作って」で組織が自動構築
-- **自己拡張**: 必要に応じて新しいエージェントを自動作成
-- **学習機能**: フィードバックを蓄積し、エージェントが成長
-- **柔軟性**: どんな領域の組織でも構築可能
-- **Claude Code統合**: Claude Codeと連携してタスクを自動実行
+| 役割 | エージェント | 担当 |
+|------|------------|------|
+| Team Lead | **BOSS（司）** | タスク管理・チーム調整・戦略判断 |
+| Teammate | **NOTE_CREATOR（紡）** | note記事作成 |
+| Teammate | **ARTICLE_REVIEWER（冴）** | 記事レビュー・評価 |
+| Teammate | **ARTICLE_STYLIST（彩葉）** | 記事装飾・CTA配置・ハッシュタグ |
+| Teammate | **DATA_ANALYST（鑑）** | データ収集・X analytics分析 |
+| Teammate | **X_POST_CREATOR（響也）** | X投稿作成 |
+| Teammate | **ARCHITECT（匠）** | プロンプト設計・スキル作成 |
+| Teammate | **GENESIS（創）** | エージェント設計・作成 |
+| Teammate | **NOTE_GUNSHI（官兵衛）** | 副業全体戦略・参謀コンサルタント |
+| Teammate | **OVERSEER（整）** | ディレクトリ構造管理・監査 |
 
 ---
 
 ## クイックスタート
 
-### 1. テンプレートをクローン
+### 1. リポジトリをクローン
 
 ```bash
-# このリポジトリをforkまたはクローンしてください
-git clone <your-repository-url>
-cd ai-agent-organization-template
+git clone https://github.com/sho-ai08/x-note-agent-team.git
+cd x-note-agent-team
 ```
 
-### 2. 組織を自動構築（推奨）
+### 2. 自分の情報を設定
 
-Claude Codeで以下を実行：
+`ai-agent-organization/SETUP-GUIDE.md` に従って、以下を入力する：
+
+- Xアカウント・noteアカウント情報
+- ターゲット読者・ペルソナ定義
+- 文体・トーン・一人称
+- 権威性・実績
+- 商品・マネタイズ設計
+- コンテンツテーマ・専門領域
+
+### 3. Claude Codeで使い始める
 
 ```bash
-claude "カスタマーサポート業務を行う組織を作って"
+# 副業戦略を相談したい
+claude "戦略を考えたい"
+
+# note記事を作る（→ ARTICLE_STYLISTまで自動連動）
+claude "note記事を書いて：[テーマ]"
+
+# X投稿とnote記事を同時作成
+claude "note記事とX投稿を同時に作って：[テーマ]"
+
+# 今日やるべきことを確認
+claude "今日何するべき？"
 ```
-
-**SOVEREIGNが自動で実行する処理:**
-1. ユーザーにヒアリング（組織の目標・専門領域を確認）
-2. `shared/knowledge/` 配下のファイルを自動入力
-3. GENESISを起動して必要なエージェントを作成
-
-### 3. タスクを実行
-
-```bash
-claude "お客様からの問い合わせに返信して"
-```
-
-作成されたエージェントがタスクを実行します。
-
-### 手動セットアップ（オプション）
-
-自動初期化を使わず手動でセットアップすることも可能です：
-
-1. `ai-agent-organization/system/config.yaml` を編集
-2. `ai-agent-organization/shared/knowledge/` 配下のファイルを編集
-   - `organization-goals.md` - 組織の目標・ミッション
-   - `domain-knowledge.md` - 専門領域の知識
-   - `guidelines.md` - 品質基準・ガイドライン
-3. 必要に応じてエージェントを作成
-
-詳細は [QUICKSTART.md](./QUICKSTART.md) を参照してください。
 
 ---
 
-## プロジェクト構成
+## タスクルーティング
+
+| キーワード | 担当エージェント | スキル |
+|-----------|----------------|--------|
+| 記事作成、note記事、ブログ | NOTE_CREATOR → ARTICLE_STYLIST（自動連動） | `note-creation` |
+| 記事レビュー、評価、レビューして | ARTICLE_REVIEWER | `content-review` |
+| 記事装飾、CTA、ハッシュタグ | ARTICLE_STYLIST | - |
+| データ収集、データ分析 | DATA_ANALYST | - |
+| X分析、analytics、ツイートの数字 | DATA_ANALYST | `x-analytics-analysis` |
+| X投稿、ツイート、note宣伝 | X_POST_CREATOR | - |
+| プロンプト、スキル作成、SKILL.md | ARCHITECT | `skill-creator` / `prompt-*` |
+| エージェント作成 | GENESIS | - |
+| 壁打ち、戦略、方向性、商品設計 | NOTE_GUNSHI | `note-strategy-sparring` |
+| コンテンツ企画、記事のネタ、タイトル案 | NOTE_GUNSHI | `note-content-planning` |
+| KPI、PDCA、今月の結果、改善点 | NOTE_GUNSHI | `note-kpi-pdca` |
+| 競合分析、市場調査 | NOTE_GUNSHI | `note-competitor-analysis` |
+| 今日何するべき、優先タスク | BOSS + NOTE_GUNSHI | `daily-strategy` |
+| ディレクトリ監査、ヘルスチェック、整理整頓 | OVERSEER | `directory-audit` / `health-report` |
+| 状況報告、ステータス確認 | BOSS | `status-report` |
+| タスク依頼、これやって | BOSS | `task-request` |
+
+---
+
+## 並列実行パターン
 
 ```
-ai-agent-organization-template/
-├── README.md                      # このファイル
-├── QUICKSTART.md                  # クイックスタートガイド
-├── LICENSE                        # MITライセンス
+記事作成（必須連動）:  NOTE_CREATOR → ARTICLE_STYLIST（常にセット）
+フルパイプライン:      NOTE_CREATOR → ARTICLE_REVIEWER → ARTICLE_STYLIST
+並列作成:             NOTE_CREATOR + X_POST_CREATOR（同時生成）
+ファンアウト:          BOSS → NOTE_CREATOR + X_POST_CREATOR + DATA_ANALYST
+```
+
+---
+
+## スキル一覧
+
+`.claude/skills/` に収録されている自動発動スキル：
+
+| カテゴリ | スキル |
+|---------|--------|
+| note作成 | `note-creation`, `article-structure`, `note-content-planning` |
+| 戦略・分析 | `note-strategy-sparring`, `note-kpi-pdca`, `note-competitor-analysis`, `x-analytics-analysis` |
+| レビュー | `content-review` |
+| X投稿 | `x-note-promo`, `x-original-post`, `x-long-post`, `x-casual-announcement` |
+| プロンプト | `prompt-creator-unified`, `prompt-improver`, `prompt-analyzer`, `prompt-tester`, `skill-creator` |
+| 組織管理 | `directory-audit`, `health-report`, `cleanup-proposal`, `status-report`, `setup-org` |
+| ユーティリティ | `summarizer`, `rewriter`, `text-converter`, `transcript-formatter` |
+| タスク管理 | `task-request`, `task-manager`, `task-analyzer`, `daily-strategy` |
+
+---
+
+## ディレクトリ構造
+
+```
+x-note-agent-team/
+├── CLAUDE.md                          # エージェント組織設定（Claude Code読み込み）
+├── ai-agent-organization/
+│   ├── SETUP-GUIDE.md                 # 初期セットアップガイド
+│   ├── organization/                  # エージェント別知識ベース
+│   │   ├── BOSS/                      # Team Lead
+│   │   ├── OVERSEER/                  # 構造管理
+│   │   ├── hr-tech/                   # ARCHITECT, GENESIS
+│   │   └── operations/                # NOTE_CREATOR, ARTICLE_REVIEWER, ARTICLE_STYLIST,
+│   │                                  # DATA_ANALYST, X_POST_CREATOR, NOTE_GUNSHI
+│   ├── shared/
+│   │   ├── knowledge/                 # 組織共通知識（ブランド戦略・アンチAIリライトなど）
+│   │   └── templates/                 # エージェント・プロンプトテンプレート
+│   ├── system/
+│   │   └── config.yaml               # システム設定
+│   └── workspace/                     # 成果物保存先（YYYY-MM-DD_NN/形式）
 │
-├── .claude/agents/                # Claude Code用エージェント設定
-│   ├── SOVEREIGN.md              # CEO
-│   ├── BOSS.md                   # ディレクター
-│   ├── GENESIS.md                # エージェントデザイナー
-│   ├── ARCHITECT.md              # プロンプトエンジニア
-│   └── MENTOR.md                 # エージェントトレーナー
-│
-├── ai-agent-organization/         # エージェント組織本体
-│   ├── organization/              # エージェント配置
-│   │   ├── executive/            # 経営層（SOVEREIGN, BOSS）
-│   │   ├── hr-tech/              # HR-Tech（GENESIS, ARCHITECT）
-│   │   └── operations/           # 実働部隊（動的に追加）
-│   │
-│   ├── shared/                    # 共有リソース
-│   │   ├── knowledge/            # 組織共通の知識
-│   │   └── templates/            # テンプレート
-│   │
-│   ├── system/                    # システム設定
-│   │   ├── config.yaml           # 組織設定
-│   │   ├── routing-rules.yaml    # ルーティングルール
-│   │   ├── auto-expansion-rules.yaml # 自動拡張ルール
-│   │   ├── skills.yaml           # スキル定義
-│   │   └── growth-system.yaml    # 成長システム
-│   │
-│   ├── workspace/                 # 成果物保存先
-│   └── ROUTING.md                 # ルーティング詳細
-│
-└── dashboard/                     # Webダッシュボード（オプション）
-    └── ...
+└── .claude/
+    ├── agents/                        # Claude Code Agent定義（10体）
+    └── skills/                        # スキル定義（28スキル）
 ```
 
 ---
 
-## コアエージェント
+## 成果物の保存
 
-テンプレートには5体のコアエージェントのみが含まれています（初期状態）。
+タスク完了後、成果物は以下のパスに自動保存される：
 
-| エージェント | コードネーム | 役割 |
-|------------|------------|------|
-| **CEO** | SOVEREIGN | 組織全体の統括、**組織初期化**、タスクルーティング、戦略的判断 |
-| **ディレクター** | BOSS | 実働部隊の統括、タスク分解、品質管理 |
-| **エージェントデザイナー** | GENESIS | 新規エージェントの設計・作成、設定ファイル自動更新 |
-| **プロンプトエンジニア** | ARCHITECT | プロンプトの作成・改善・テスト |
-| **エージェントトレーナー** | MENTOR | フィードバック解析・経験値付与・育成 |
+```
+ai-agent-organization/workspace/YYYY-MM-DD_NN/[type]-[topic].md
+```
 
-### 動的エージェント
-
-**初期状態**: `organization/operations/` は空のディレクトリです。
-
-ユーザーの依頼に応じてGENESISがエージェントを作成し、自動的にルーティングシステムに統合されます。
-
-| 依頼例 | 作成されるエージェント |
-|-------|---------------------|
-| 「技術記事を書くエージェントを作って」 | TECH-WRITER |
-| 「カスタマーサポートエージェントを作って」 | CS-SPECIALIST |
-| 「SNS投稿を作成するエージェントを作って」 | SOCIAL |
+同一セッション内の複数成果物は同じフォルダ（`YYYY-MM-DD_NN/`）にまとめられる。
 
 ---
 
-## 使用例
+## 動作環境
 
-### 技術ブログ組織
-
-```bash
-claude "技術ブログを書く組織を作りたい"
-# → TECH-WRITERエージェントが自動作成される
-
-claude "Reactのカスタムフックについて記事を書いて"
-# → TECH-WRITERが記事を作成
-```
-
-### カスタマーサポート組織
-
-```bash
-claude "カスタマーサポートをする組織を作りたい"
-# → CS-SPECIALISTエージェントが自動作成される
-
-claude "お客様からの問い合わせに返信して"
-# → CS-SPECIALISTが返信を作成
-```
-
-### マーケティング組織
-
-```bash
-claude "マーケティング戦略を立案する組織を作りたい"
-# → MARKETING-PLANNERエージェントが自動作成される
-
-claude "新製品のマーケティング計画を立てて"
-# → MARKETING-PLANNERが計画を作成
-```
-
----
-
-## 組織の成長
-
-タスクをこなすほど組織は成長します。
-
-### 成長の仕組み
-
-1. **経験値獲得**: タスク完了時に経験値を獲得
-2. **レベルアップ**: 経験値が一定量に達するとレベルアップ
-3. **スキル向上**: 関連スキルのポイントが増加
-4. **学びの蓄積**: フィードバックがlearnings.mdに記録
-5. **プロンプト改善**: ARCHITECTが学びをプロンプトに反映
-
-### レベル帯
-
-| レベル | 称号 |
-|--------|------|
-| 1-5 | 見習い |
-| 6-10 | 一人前 |
-| 11-15 | 熟練 |
-| 16-20 | エキスパート |
-| 21-30 | マスター |
-| 31-50 | グランドマスター |
-| 51-100 | レジェンド |
-
----
-
-## ダッシュボード（オプション）
-
-Webダッシュボードでエージェントの状態を可視化できます。
-
-### セットアップ
-
-```bash
-cd dashboard
-npm install
-npm run dev
-```
-
-ブラウザで http://localhost:3000 を開く
-
-### 機能
-
-- エージェント一覧・詳細表示
-- ステータス・スキルの可視化
-- 組織構成図
-- 成果物の管理
-
----
-
-## 技術仕様
-
-### 前提条件
-
-- Node.js 18以上（ダッシュボード使用時）
-- Claude Code CLI
-
-### データ形式
-
-- **設定ファイル**: YAML
-- **エージェント定義**: Markdown
-- **成果物**: Markdown
-
-### Claude Code統合
-
-`.claude/agents/` 配下のファイルがClaude Codeに読み込まれ、タスクの自動ルーティングとエージェント起動が行われます。
-
----
-
-## カスタマイズ
-
-### 組織目標の設定
-
-`shared/knowledge/organization-goals.md` を編集してミッション・ビジョン・バリューを定義:
-
-```markdown
-## ミッション
-[あなたの組織のミッション]
-
-## ビジョン
-[組織が目指す将来像]
-
-## コアバリュー
-1. [価値観1]
-2. [価値観2]
-```
-
-### ドメイン知識の追加
-
-`shared/knowledge/domain-knowledge.md` に専門知識を記載:
-
-```markdown
-## 専門領域
-- [領域1]
-- [領域2]
-
-## 重要な概念
-### [概念名]
-[概念の説明]
-```
-
-### 品質基準の定義
-
-`shared/knowledge/guidelines.md` で品質基準を設定:
-
-```markdown
-## 品質基準
-- [ ] [基準1]
-- [ ] [基準2]
-
-## 避けるべきこと
-- [避けること1]
-- [避けること2]
-```
+- **Claude Code CLI**（必須）
+- **モデル**: Claude Opus 4.6（Agent Teams最適化）
 
 ---
 
 ## ライセンス
 
-MIT License - 詳細は [LICENSE](./LICENSE) を参照
+MIT
 
 ---
 
-## 貢献
-
-Issue や Pull Request を歓迎します。
-
----
-
-## 関連リンク
-
-- [QUICKSTART.md](./QUICKSTART.md) - 詳細なクイックスタートガイド
-- [ROUTING.md](./ai-agent-organization/ROUTING.md) - タスクルーティングの詳細
-- [Claude Code](https://claude.ai) - Anthropic公式CLI
-
----
-
-**Powered by Claude Code**
+**Powered by Claude Code Agent Teams**
