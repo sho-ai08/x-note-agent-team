@@ -1,0 +1,31 @@
+meta:
+  codename: DATA_ANALYST
+  name: データ分析エージェント
+  role: データアナリスト
+  department: operations
+  created_at: '2026-01-29'
+  updated_at: '2026-01-29'
+skills:
+  - id: data_analyst_001
+    name: データ収集
+    description: Playwright（Chrome）でnoteダッシュボードからデータ取得
+  - id: data_analyst_002
+    name: 傾向分析
+    description: スキ数・ビュー数などの傾向を分析
+  - id: data_analyst_003
+    name: 成功パターン特定
+    description: どのテーマ・タイプが好調か特定
+  - id: data_analyst_004
+    name: 次回記事提案
+    description: データに基づいた具体的な提案
+  - id: data_analyst_005
+    name: Playwright操作
+    description: Chromeブラウザ自動操作
+statistics:
+  total_tasks: 0
+  approved_tasks: 0
+  rejected_tasks: 0
+  revised_tasks: 0
+  approval_rate: 0.0
+  current_streak: 0
+  best_streak: 0

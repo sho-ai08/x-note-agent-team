@@ -1,0 +1,114 @@
+# ============================================
+# AIエージェント組織テンプレート 全体設定
+# ============================================
+
+# === プロジェクト情報 ===
+project:
+  name: "Note記事運用組織"
+  owner: "しょー"
+  created_at: "2026-01-29"
+  description: "noteプラットフォームでの生成AI記事作成・運用を行う専門組織"
+
+# === 組織設定 ===
+organization:
+  # エージェント一覧
+  agents:
+    - codename: "BOSS"
+      role: "Team Lead・統括エージェント"
+      department: "BOSS"
+    - codename: "GENESIS"
+      role: "エージェント生成エージェント"
+      department: "hr-tech/agent-designer-GENESIS"
+    - codename: "ARCHITECT"
+      role: "プロンプトエンジニア＆スキルクリエイター"
+      department: "hr-tech/prompt-engineer-ARCHITECT"
+    - codename: "NOTE_CREATOR"
+      role: "note記事作成エージェント"
+      department: "operations/note-creator-NOTE_CREATOR"
+    - codename: "ARTICLE_REVIEWER"
+      role: "記事レビューエージェント"
+      department: "operations/article-reviewer-ARTICLE_REVIEWER"
+    - codename: "ARTICLE_STYLIST"
+      role: "記事装飾・CTA挿入エージェント"
+      department: "operations/article-stylist-ARTICLE_STYLIST"
+    - codename: "DATA_ANALYST"
+      role: "データ分析エージェント"
+      department: "operations/data-analyst-DATA_ANALYST"
+    - codename: "X_POST_CREATOR"
+      role: "X投稿作成エージェント"
+      department: "operations/x-post-creator-X_POST_CREATOR"
+    - codename: "NOTE_GUNSHI"
+      role: "note×X収益化戦略・参謀エージェント"
+      department: "operations/note-gunshi-NOTE_GUNSHI"
+    - codename: "OVERSEER"
+      role: "ディレクトリ構造管理・監査エージェント"
+      department: "OVERSEER"
+
+  # 階層構造
+  hierarchy:
+    team-lead:
+      description: "チーム統括"
+      agents:
+        - "BOSS"
+    operations:
+      description: "実働部隊"
+      agents:
+        - "NOTE_CREATOR"
+        - "ARTICLE_REVIEWER"
+        - "ARTICLE_STYLIST"
+        - "DATA_ANALYST"
+        - "X_POST_CREATOR"
+        - "NOTE_GUNSHI"
+    management:
+      description: "構造管理"
+      agents:
+        - "OVERSEER"
+    hr-tech:
+      description: "エージェント人事部（HR-Tech）"
+      agents:
+        - "GENESIS"
+        - "ARCHITECT"
+
+# === 作業領域設定 ===
+workspace:
+  # 保存先: フラット構造（workspace/ルートに直接保存）
+  structure: "flat"
+  base_path: "workspace/"
+
+  # 自動クリーンアップ（手動管理推奨）
+  auto_cleanup:
+    enabled: false
+
+  # ログ保持期間
+  log_retention:
+    daily_logs_days: 90
+    review_logs_days: 365
+    task_logs: "permanent"
+
+  # ファイル命名規則
+  naming_convention:
+    date_format: "YYYY-MM-DD"
+    separator: "_"
+    format: "YYYY-MM-DD_[type]-[topic].md"
+
+# === 通知設定 ===
+notifications:
+  task_complete: true
+
+# === ルーティング設定 ===
+routing:
+  # デフォルトの判定者
+  default_router: "BOSS"
+
+  # 自動実行の有効化
+  auto_execute_enabled: true
+
+# === デバッグ設定 ===
+debug:
+  verbose_logging: false
+  show_routing_decision: true
+
+# === 拡張設定 ===
+extensions:
+  custom_agents_enabled: true
+  custom_prompts_enabled: true

@@ -1,0 +1,32 @@
+meta:
+  codename: ARCHITECT
+  name: プロンプト生成エージェント
+  role: Prompt Engineer
+  department: hr-tech
+  created_at: '2025-12-07'
+  updated_at: '2026-01-31'
+skills:
+  - id: arch_001
+    name: プロンプト作成
+  - id: arch_002
+    name: 構造化設計
+  - id: arch_003
+    name: 変数設計
+  - id: arch_004
+    name: チェーン設計
+  - id: arch_005
+    name: 自己改善型設計
+  - id: arch_006
+    name: メタプロンプト設計
+statistics:
+  total_tasks: 1
+  approved_tasks: 1
+  rejected_tasks: 0
+  revised_tasks: 0
+  approval_rate: 100
+  current_streak: 1
+  best_streak: 1
+  prompt_stats:
+    prompts_created: 0
+    prompts_improved: 0
+    prompts_analyzed: 0

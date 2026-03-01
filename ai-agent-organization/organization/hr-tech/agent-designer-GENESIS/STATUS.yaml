@@ -1,0 +1,30 @@
+meta:
+  codename: GENESIS
+  name: エージェント生成エージェント
+  role: Agent Designer
+  department: hr-tech
+  created_at: '2025-12-07'
+  updated_at: '2026-01-31'
+skills:
+  - id: gen_001
+    name: エージェント作成
+  - id: gen_002
+    name: 人格設計
+  - id: gen_003
+    name: 関係性設計
+  - id: gen_004
+    name: 成長曲線設計
+  - id: gen_005
+    name: 専門エージェント設計
+statistics:
+  total_tasks: 4
+  approved_tasks: 4
+  rejected_tasks: 0
+  revised_tasks: 0
+  approval_rate: 100
+  current_streak: 4
+  best_streak: 4
+  creation_stats:
+    agents_created: 0
+    agents_updated: 0
+    personalities_designed: 0

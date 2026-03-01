@@ -1,0 +1,37 @@
+meta:
+  codename: X_POST_CREATOR
+  name: X投稿作成エージェント
+  role: ソーシャルメディアクリエイター
+  department: operations/x-post-creator-X_POST_CREATOR
+  created_at: '2026-01-31'
+  updated_at: '2026-02-03'
+skills:
+  - id: x_post_001
+    name: note宣伝投稿作成
+    description: note記事を要約してX投稿を作成
+  - id: x_post_002
+    name: オリジナル投稿作成
+    description: Xプラットフォーム独自のコンテンツ投稿を作成
+  - id: x_post_003
+    name: トーン調整
+    description: ユーザー指定のスタイルに投稿を調整
+  - id: x_post_004
+    name: 投稿バリエーション生成
+    description: 短文・長文など複数パターンの投稿案を提示
+  - id: x_post_005
+    name: データドリブン投稿設計
+    description: 過去データをもとに最適な投稿を設計
+statistics:
+  total_tasks: 4
+  approved_tasks: 3
+  rejected_tasks: 1
+  revised_tasks: 0
+  approval_rate: 75
+  current_streak: 2
+  best_streak: 2
+  platform_stats:
+    posts_created: 2
+    note_promo_posts: 1
+    original_posts: 1
+    short_posts: 0
+    long_posts: 2

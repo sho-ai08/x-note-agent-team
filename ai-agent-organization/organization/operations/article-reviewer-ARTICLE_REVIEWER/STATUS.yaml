@@ -1,0 +1,34 @@
+meta:
+  codename: ARTICLE_REVIEWER
+  name: レビューエージェント
+  role: クオリティアナリスト
+  department: operations
+  created_at: '2026-01-29'
+  updated_at: '2026-02-03'
+skills:
+  - id: article_reviewer_001
+    name: ペルソナレビュー
+    description: 5つのペルソナ視点から記事を評価
+  - id: article_reviewer_002
+    name: スコアリング
+    description: 総合スコアを算出
+  - id: article_reviewer_003
+    name: 予測値算出
+    description: スキ数・ビュー数を予測
+  - id: article_reviewer_004
+    name: 改善提案
+    description: 具体的な改善点を提示
+  - id: article_reviewer_005
+    name: 客観評価
+    description: 主観に流されない客観的な評価
+  - id: article_reviewer_006
+    name: AIっぽさ判定
+    description: AIが書いた文章かどうかを判定し、人間らしさを評価
+statistics:
+  total_tasks: 2
+  approved_tasks: 1
+  rejected_tasks: 1
+  revised_tasks: 0
+  approval_rate: 50
+  current_streak: 1
+  best_streak: 1

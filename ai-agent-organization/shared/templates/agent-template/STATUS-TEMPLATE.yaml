@@ -1,0 +1,47 @@
+# ============================================
+# エージェントステータスファイル テンプレート
+# ============================================
+# このファイルはエージェント作成用のテンプレートです。
+# [PLACEHOLDER] を実際の値に置き換えて使用してください。
+# 作成後、このコメントブロックは削除してください。
+
+# === 基本情報 ===
+meta:
+  codename: "[CODENAME]"              # 英語のコードネーム
+  name: "[正式名称]"                   # 日本語の正式名称
+  role: "[役職]"                       # 役職名
+  department: "[所属部署]"             # organization/xxx/xxx
+  created_at: "YYYY-MM-DD"            # 作成日
+  updated_at: "YYYY-MM-DD"            # 最終更新日
+
+# === スキル ===
+skills:
+  - id: "skill_001"
+    name: "[スキル名]"
+    description: "[スキルの説明]"
+
+  - id: "skill_002"
+    name: "[スキル名]"
+    description: "[スキルの説明]"
+
+  - id: "skill_003"
+    name: "[スキル名]"
+    description: "[スキルの説明]"
+
+# === 統計情報 ===
+statistics:
+  total_tasks: 0                      # 総タスク数
+  approved_tasks: 0                   # 承認タスク数
+  rejected_tasks: 0                   # 却下タスク数
+  revised_tasks: 0                    # 修正タスク数
+  approval_rate: 0.0                  # 承認率
+  current_streak: 0                   # 連続承認数
+  best_streak: 0                      # 最高連続承認数
+
+  # プラットフォーム別統計（該当エージェントのみ使用）
+  platform_stats:
+    posts_created: 0                  # X投稿作成数
+    articles_written: 0               # note記事作成数
+    mails_sent: 0                     # メール作成数
+    prompts_created: 0                # プロンプト作成数
+    agents_created: 0                 # エージェント作成数

@@ -1,0 +1,26 @@
+meta:
+  codename: BOSS
+  name: 部長エージェント
+  role: Director
+  department: executive
+  created_at: '2025-12-07'
+  updated_at: '2025-12-07'
+skills:
+  - id: boss_001
+    name: タスク分解
+  - id: boss_002
+    name: チーム調整
+  - id: boss_003
+    name: 品質管理
+statistics:
+  total_tasks: 0
+  approved_tasks: 0
+  rejected_tasks: 0
+  revised_tasks: 0
+  approval_rate: 0.0
+  current_streak: 0
+  best_streak: 0
+  coordination_stats:
+    multi_agent_tasks: 0
+    single_agent_tasks: 0
+    agents_coordinated: []

@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+.env*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code local settings (contains user-specific paths)
+.claude/settings.local.json
+
+# Obsidian personal settings
+.obsidian/

@@ -1,0 +1,31 @@
+meta:
+  codename: NOTE_CREATOR
+  name: ノート記事作成エージェント
+  role: コンテンツクリエイター
+  department: operations
+  created_at: '2026-01-29'
+  updated_at: '2026-02-01'
+skills:
+  - id: note_creator_001
+    name: 記事作成
+    description: note記事（タイトル・リード文・本文）を作成する
+  - id: note_creator_002
+    name: 1次情報挿入
+    description: 実体験や実験結果を記事に盛り込む
+  - id: note_creator_003
+    name: ターゲット最適化
+    description: 読者ターゲットに刺さる構成を設計
+  - id: note_creator_004
+    name: 構成設計
+    description: 記事構成を論理的に設計
+  - id: note_creator_005
+    name: タイトル生成
+    description: 検索されやすく興味を引くタイトルを生成
+statistics:
+  total_tasks: 3
+  approved_tasks: 2
+  rejected_tasks: 0
+  revised_tasks: 1
+  approval_rate: 66.7
+  current_streak: 2
+  best_streak: 2
