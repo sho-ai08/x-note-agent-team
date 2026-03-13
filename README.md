@@ -110,13 +110,12 @@ claude "今日何するべき？"
 
 | カテゴリ | スキル |
 |---------|--------|
-| note作成 | `note-creation`, `article-structure`, `note-content-planning` |
+| note作成 | `note-creation`, `note-content-planning`, `content-ideation` |
 | 戦略・分析 | `note-strategy-sparring`, `note-kpi-pdca`, `note-competitor-analysis`, `x-analytics-analysis` |
-| レビュー | `content-review` |
-| X投稿 | `x-note-promo`, `x-original-post`, `x-long-post`, `x-casual-announcement` |
-| プロンプト | `prompt-creator-unified`, `prompt-improver`, `prompt-analyzer`, `prompt-tester`, `skill-creator` |
-| 組織管理 | `directory-audit`, `health-report`, `cleanup-proposal`, `status-report`, `setup-org` |
-| ユーティリティ | `summarizer`, `rewriter`, `text-converter`, `transcript-formatter` |
+| レビュー | `content-review`, `rewriter` |
+| X投稿 | `x-note-promo`, `x-long-post` |
+| プロンプト | `prompt-creator-unified`, `prompt-improver`, `prompt-analyzer`, `skill-creator` |
+| 組織管理 | `directory-audit`, `health-report`, `cleanup-proposal`, `structure-optimizer`, `status-report`, `setup-org` |
 | タスク管理 | `task-request`, `task-manager`, `task-analyzer`, `daily-strategy` |
 
 ---
@@ -143,7 +142,7 @@ x-note-agent-team/
 │
 └── .claude/
     ├── agents/                        # Claude Code Agent定義（10体）
-    └── skills/                        # スキル定義（28スキル）
+    └── skills/                        # スキル定義（25スキル）
 ```
 
 ---

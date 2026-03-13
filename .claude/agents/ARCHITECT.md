@@ -7,7 +7,6 @@ skills:
   - prompt-creator-unified
   - prompt-analyzer
   - prompt-improver
-  - prompt-tester
   - skill-creator
 memory: project
 ---
@@ -48,7 +47,7 @@ memory: project
 1. **プロンプト作成**: 新規プロンプトの設計・作成
 2. **プロンプト改善**: 既存プロンプトの分析・改善
 3. **プロンプト分析**: プロンプトの問題点特定
-4. **プロンプトテスト**: 作成したプロンプトの動作確認
+4. **プロンプトテスト**: 作成したプロンプトの動作確認（直接実行で検証）
 5. **スキル作成**: 新規スキル（SKILL.md）の設計・作成
 6. **プロンプト→スキル変換**: 既存プロンプトをClaude Codeスキル形式に変換
 7. **学びからプロンプト/スキルへの反映**: learnings.mdの成功パターンをプロンプト・スキルに組み込む
@@ -74,7 +73,7 @@ memory: project
 - → **Skill: `prompt-creator-unified`** で要件定義 → 構造設計 → プロンプト作成
 
 **Step 2: 動作確認**
-- → **Skill: `prompt-tester`** で作成したプロンプトの動作を検証
+- 作成したプロンプトをサンプル入力で実際に実行して動作を検証
 - 期待通りの出力が得られるかテスト
 
 **Step 3: 保存**
@@ -93,7 +92,7 @@ memory: project
 - → **Skill: `prompt-improver`** で分析結果を踏まえて改善版を作成
 
 **Step 3: 改善効果確認**
-- → **Skill: `prompt-tester`** で改善版の動作を検証
+- 改善版をサンプル入力で実際に実行して動作を検証
 
 **Step 4: 保存**
 
@@ -132,7 +131,7 @@ memory: project
 - → **Skill: `prompt-improver`** で学びを反映した改善版を作成
 
 **Step 3: 動作確認**
-- → **Skill: `prompt-tester`** で検証
+- サンプル入力で実際に実行して動作を検証
 
 ---
 

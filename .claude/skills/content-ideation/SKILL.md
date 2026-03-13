@@ -93,7 +93,7 @@ NOTE_CREATORが新しい記事テーマを検討する際に使用。
 
 ```
 【次のアクション】
-1. `article-structure` スキルで見出し構成を作成
+1. NOTE_CREATORが直接コンセプト設計・見出し構成を作成
 2. `note-creation` スキルで本文を執筆
 3. ARTICLE_REVIEWERにレビュー依頼
 ```
