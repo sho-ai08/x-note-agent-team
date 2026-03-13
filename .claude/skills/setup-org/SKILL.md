@@ -53,9 +53,9 @@ AskUserQuestion ツールで SETUP-GUIDE.md の **Step 1〜6 を1ステップず
 
 **Step 1: アカウント基本情報**
 - Xアカウント名 / ハンドルネーム（`[発信者名]` に反映）
-- noteアカウントURL
 - メインテーマ・発信ジャンル（`{ジャンル}` に反映）
 - 発信開始時期
+- 現在使っている発信チャネル（X / note / YouTube / ブログ / メルマガ など）
 
 **Step 2: ターゲット読者・ペルソナ定義**
 - メインターゲット（年齢・職業・状況）
@@ -80,6 +80,7 @@ AskUserQuestion ツールで SETUP-GUIDE.md の **Step 1〜6 を1ステップず
 - 無料コンテンツの役割
 - 有料商品①（名称・価格）（`{フロント商品}` に反映）
 - 有料商品②（名称・価格）（`{ミドル商品}` `{サロン名}` に反映）
+- **販売プラットフォーム**（note / Zenn / Brain / ブログ / Gumroad / 未定 など）← **重要**: 後のリネーム判断に使用
 - ファネル設計
 - CTAの置き方
 
@@ -192,12 +193,12 @@ AskUserQuestion ツールで SETUP-GUIDE.md の **Step 1〜6 を1ステップず
 
 ---
 
-### グループH: note軍師エージェント（NOTE_GUNSHI）
+### グループH: 戦略参謀エージェント（GUNSHI）
 
 | ファイルパス | 反映内容 |
 |------------|---------|
-| `ai-agent-organization/organization/operations/note-gunshi-NOTE_GUNSHI/knowledge/knowhow/account-design.md` | Step 1〜6 の情報をまとめた戦略設計書【新規作成】 |
-| `ai-agent-organization/organization/operations/note-gunshi-NOTE_GUNSHI/knowledge/knowhow/master-strategy.md` | コンテンツ戦略・KPI・商品ラインの全体設計（Step 2・5・6）【新規作成】 |
+| `ai-agent-organization/organization/operations/gunshi-GUNSHI/knowledge/knowhow/account-design.md` | Step 1〜6 の情報をまとめた戦略設計書【新規作成】 |
+| `ai-agent-organization/organization/operations/gunshi-GUNSHI/knowledge/knowhow/master-strategy.md` | コンテンツ戦略・KPI・商品ラインの全体設計（Step 2・5・6）【新規作成。販売プラットフォームが未定の場合は `[未定]` プレースホルダーで残す】 |
 
 ---
 
@@ -218,6 +219,33 @@ AskUserQuestion ツールで SETUP-GUIDE.md の **Step 1〜6 を1ステップず
 
 ---
 
+## Phase 4.5: リネーム案内（販売プラットフォームが note 以外 or 未定の場合）
+
+Step 5 でヒアリングした「販売プラットフォーム」を確認し、以下の判定を行う：
+
+- **noteを使う（確定）**: リネーム不要。Phase 5 へ進む
+- **note以外のプラットフォームを使う**: 以下のリネーム案内をユーザーに提示する
+- **未定**: 以下のリネーム案内をユーザーに提示する（今はリネームしなくてよい旨も伝える）
+
+### リネーム案内文
+
+```
+このテンプレートはデフォルトでnoteでの発信・販売を想定した名称になっています。
+販売プラットフォームが確定したタイミングで、以下のリネームを検討してください。
+
+【リネーム対象】
+- エージェント: NOTE_CREATOR → [プラットフォーム名]_CREATOR（例: ZENN_CREATOR / BLOG_CREATOR）
+- エージェント定義ファイル: .claude/agents/NOTE_CREATOR.md → 対応する名前に変更
+- スキル: note-creation / note-content-planning / note-strategy-sparring / note-competitor-analysis / note-kpi-pdca
+  → プラットフォーム名を外した汎用名（例: content-creation / content-planning など）に変更可能
+- ディレクトリ: operations/note-creator-NOTE_CREATOR/ → operations/[対応名]-[対応ID]/
+
+今はそのままにして、プラットフォームが決まった時点で GUNSHI（官兵衛）に
+「エージェントをリネームしたい」と伝えれば一括変更を手伝います。
+```
+
+---
+
 ## Phase 5: 完了報告
 
 すべてのファイル生成完了後、以下の形式で報告する：
@@ -230,8 +258,9 @@ AskUserQuestion ツールで SETUP-GUIDE.md の **Step 1〜6 を1ステップず
 |------|--------|
 | 発信者名 | [値] |
 | ジャンル | [値] |
-| フロント商品 | [値] |
-| ミドル商品 | [値] |
+| 販売プラットフォーム | [値 or 未定] |
+| フロント商品 | [値 or 未定] |
+| ミドル商品 | [値 or 未定] |
 | 主要テーマ | [値] |
 | inboxサンプル | [あり（X件）/ なし] |
 
@@ -241,8 +270,12 @@ AskUserQuestion ツールで SETUP-GUIDE.md の **Step 1〜6 を1ステップず
 ### [未定] のまま残った項目
 [ある場合のみ記載。後から埋める方法も案内]
 
+### エージェント・スキルのリネーム
+[noteを使う確定の場合: 「リネーム不要」]
+[note以外 or 未定の場合: 「プラットフォーム確定後にGUNSHIへリネーム依頼を」と案内]
+
 ### 次のアクション
-1. 「戦略を考えたい」→ NOTE_GUNSHI（官兵衛）に壁打ちを依頼
+1. 「戦略を考えたい」→ GUNSHI（官兵衛）に壁打ちを依頼（プラットフォーム未定でもOK）
 2. 「記事のネタを考えて」→ コンテンツ企画を開始
 3. 「今日何するべき？」→ BOSS + GUNSHI がデイリータスクを提案
 ```
