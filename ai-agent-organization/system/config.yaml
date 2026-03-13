@@ -5,7 +5,7 @@
 # === プロジェクト情報 ===
 project:
   name: "Note記事運用組織"
-  owner: "しょー"
+  owner: "[発信者名]"
   created_at: "2026-01-29"
   description: "noteプラットフォームでの生成AI記事作成・運用を行う専門組織"
 
