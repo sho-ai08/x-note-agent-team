@@ -19,7 +19,7 @@
 ---
 
 ### ペルソナ1: [YOUR_PERSONA_1_NAME]（ターゲット初心者層）
-> ⚙️ **要カスタマイズ**: SETUP-GUIDE.md Step 2のターゲット読者情報を元に設定してください。
+> ⚙️ **要カスタマイズ**: setup-org スキルのヒアリング Step 2のターゲット読者情報を元に設定してください。
 
 **属性:**
 - [YOUR_PERSONA_1_AGE]歳、[YOUR_PERSONA_1_JOB]
@@ -58,7 +58,7 @@
 ---
 
 ### ペルソナ2: [YOUR_PERSONA_2_NAME]（ターゲット中間層）
-> ⚙️ **要カスタマイズ**: SETUP-GUIDE.md Step 2のターゲット読者情報を元に設定してください。
+> ⚙️ **要カスタマイズ**: setup-org スキルのヒアリング Step 2のターゲット読者情報を元に設定してください。
 
 **属性:**
 - [YOUR_PERSONA_2_AGE]歳、[YOUR_PERSONA_2_JOB]
@@ -136,7 +136,7 @@
 ---
 
 ### ペルソナ4: [YOUR_PERSONA_4_NAME]（ROIで判断する購買検討層）
-> ⚙️ **要カスタマイズ**: SETUP-GUIDE.md Step 2のターゲット読者情報を元に設定してください。
+> ⚙️ **要カスタマイズ**: setup-org スキルのヒアリング Step 2のターゲット読者情報を元に設定してください。
 
 **属性:**
 - [YOUR_PERSONA_4_AGE]歳、[YOUR_PERSONA_4_JOB]

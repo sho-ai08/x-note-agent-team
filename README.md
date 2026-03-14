@@ -43,7 +43,8 @@ cd x-note-agent-team
 
 ### 2. 自分の情報を設定
 
-`ai-agent-organization/SETUP-GUIDE.md` に従って、以下を入力する：
+Claude Code に「組織を作って」と話しかけると `setup-org` スキルが自動起動。
+対話形式でヒアリングしながら、以下の情報を全エージェントに自動反映する：
 
 - Xアカウント・noteアカウント情報
 - ターゲット読者・ペルソナ定義
@@ -126,7 +127,6 @@ claude "今日何するべき？"
 x-note-agent-team/
 ├── CLAUDE.md                          # エージェント組織設定（Claude Code読み込み）
 ├── ai-agent-organization/
-│   ├── SETUP-GUIDE.md                 # 初期セットアップガイド
 │   ├── organization/                  # エージェント別知識ベース
 │   │   ├── BOSS/                      # Team Lead
 │   │   ├── OVERSEER/                  # 構造管理

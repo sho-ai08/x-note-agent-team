@@ -1,0 +1,16 @@
+meta:
+  agent_id: LETTER_CREATOR
+  agent_name: 筆（ふで）
+  role: セールスレター作成
+  updated_at: "2026-03-14"
+
+statistics:
+  total_tasks: 0
+  approved_tasks: 0
+  revised_tasks: 0
+  approval_rate: 0
+  current_streak: 0
+  best_streak: 0
+
+skills:
+  - letter-creation
